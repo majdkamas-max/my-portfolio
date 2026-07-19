@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض أعمال مجد خميس | Portfolio</title>
+    
+    <!-- ربط محرك Tailwind CSS لتنسيق الواجهات فوراً -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- إضافة خطوط احترافية متناسقة للعربية والإنجليزية -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body id="home" class="bg-[#0f172a] text-slate-200 antialiased min-h-screen flex flex-col">
+
+    <!-- 1. شريط التنقل العلوي (Navbar) الاحترافي بتأثير شفاف -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <!-- الشعار أو الاسم -->
+            <a href="#home" class="text-xl font-bold text-white tracking-wide font-['Plus_Jakarta_Sans']">
+                majd<span class="text-indigo-500"> kamas</span>
+            </a>
+            
+            <!-- روابط التنقل السريع -->
+            <div class="hidden md:flex items-center space-x-reverse space-x-8 text-sm font-medium text-slate-400">
+                <a href="#home" class="text-white hover:text-indigo-400 transition-colors">الرئيسية</a>
+                <a href="#about" class="hover:text-indigo-400 transition-colors">نبذة عني</a>
+                <a href="#skills" class="hover:text-indigo-400 transition-colors">المهارات</a>
+                <a href="#projects" class="hover:text-indigo-400 transition-colors">المشاريع</a>
+                <a href="#contact" class="hover:text-indigo-400 transition-colors">تواصل معي</a>
+            </div>
+
+            <!-- زر التواصل البارز -->
+            <div>
+                <a href="#contact" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full text-sm font-semibold transition-all shadow-lg shadow-indigo-600/20">
+                    وظفني 💼
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- المحتوى الرئيسي للموقع -->
+    <main class="flex-grow max-w-7xl mx-auto px-6 w-full">
+        
+        <!-- قسم الـ Hero (المقدمة) -->
+        <section class="min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-28 lg:pt-20">
+            
+            <div class="space-y-6 text-right order-2 lg:order-1">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-full text-xs font-medium">
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                    متاح حالياً للمشاريع والفرص البرمجية
+                </div>
+                
+                <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight">
+                    شغوف بتحويل الأفكار المعقدة إلى <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">حلول برمجية</span> ذكية ونظيفة.
+                </h1>
+                
+                <p class="text-base md:text-lg text-slate-400 leading-relaxed max-w-xl">
+                    أهلاً بك في مساحتي البرمجية، أنا <strong class="text-white font-semibold">مجد خميس</strong> : <span class="text-indigo-400 font-semibold">مطور ويب متكامل (Full-Stack Web Developer)</span> ومتخصص في بناء تطبيقات الديسكتوب المتقدمة وأنظمة الويب المتكاملة. أركز دائماً على كتابة كود منظم وقابل للتطوير يمنح المستخدم أفضل تجربة ممكنة.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#projects" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-semibold transition-all shadow-lg shadow-indigo-600/25 flex items-center gap-2">
+                        تصفح مشاريعي 🚀
+                    </a>
+                    <!-- زر السيرة الذاتية للتحميل المباشر بعد المعالجة الجذابة -->
+                    <a href="cv.pdf" download="Majd_Kamas_CV.pdf" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-xl font-semibold transition-all flex items-center gap-2">
+                         تحميل السيرة الذاتية (CV) 📄
+                    </a>
+                </div>
+            </div>
+
+            <!-- شاشة محاكاة الـ Terminal المدمج بها المؤشر الوامض -->
+            <div class="w-full order-1 lg:order-2 font-['Plus_Jakarta_Sans']">
+                <div class="w-full bg-[#1e293b]/60 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-sm">
+                    <div class="bg-[#1e293b] px-4 py-3 flex items-center justify-between border-b border-slate-800">
+                        <div class="flex space-x-2 space-x-reverse">
+                            <span class="w-3 h-3 rounded-full bg-red-500/80 block"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500/80 block"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500/80 block"></span>
+                        </div>
+                        <span class="text-xs text-slate-500 font-mono">bash - portfolio.sh</span>
+                    </div>
+                    <div class="p-6 space-y-4 font-mono text-sm text-left select-none" dir="ltr">
+                        <div>
+                            <span class="text-emerald-400">~ $</span> <span class="text-slate-200">whoami</span>
+                            <p class="text-indigo-400 mt-1">majd_kamas / Full-Stack Web Developer</p>
+                        </div>
+                        <div>
+                            <span class="text-emerald-400">~ $</span> <span class="text-slate-200">cat tech-stack.json</span>
+                            <pre class="text-cyan-400 mt-1 text-xs md:text-sm bg-[#0f172a]/40 p-3 rounded-lg border border-slate-800/80 font-mono">
+{
+  "desktop": ["C#", "Windows Forms", "OOP"],
+  "backend": ["PHP", "Laravel Framework"],
+  "frontend": ["HTML5", "CSS3", "TailwindCSS", "JS"]
+}</pre>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <span class="text-emerald-400">~ $</span> <span class="text-slate-200">status --current</span>
+                            <span class="text-amber-400 animate-pulse">Building awesome systems...</span><span class="terminal-cursor"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم نبذة عني (About Me) -->
+        <section id="about" class="py-24 border-t border-slate-800/50">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                
+                <div class="lg:col-span-2 space-y-6 text-right">
+                    <span class="text-xs font-bold uppercase tracking-widest text-indigo-500 font-['Plus_Jakarta_Sans']">ABOUT ME</span>
+                    <h2 class="text-2xl md:text-4xl font-bold text-white leading-tight">
+                        أبني الأنظمة من الجذور. <br class="hidden md:block"> أهتم بالتفاصيل وأعشق التحديات البرمجية.
+                    </h2>
+                    <p class="text-slate-400 leading-relaxed text-base md:text-lg">
+                        أنا مبرمج ومطور برمجيات أؤمن بأن الكود الممتاز ليس فقط ما يعمل بدون أخطاء، بل هو الكود النظيف والمكتب بأسلوب احترافي يسهل صيانته وتوسيع نطاقه مستقبلياً المستند إلى معايير الـ <strong class="text-slate-200 font-semibold">OOP</strong>. بدأت رحلتي البرمجية مدفوعاً بالفضول والشغف لحل المشكلات الرقمية المعقدة وتحويلها إلى أدوات سهلة وسلسة الاستخدام.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed text-base md:text-lg">
+                        خلال مسيرتي، قمت بتطوير العديد من الأنظمة المتكاملة؛ بدءاً من تطبيقات سطح المكتب (Desktop Apps) القوية والمستقرة باستخدام لغة <strong class="text-slate-200 font-semibold">#C</strong> وإطار عمل <strong class="text-slate-200 font-semibold">Windows Forms</strong>، وصولاً إلى بناء مواقع وأنظمة ويب متكاملة، آمنة وسريعة من الصفر باستخدام <strong class="text-slate-200 font-semibold">PHP</strong> وبيئة عمل <strong class="text-slate-200 font-semibold">Laravel</strong> الاحترافية.
+                    </p>
+                    
+                    <div class="pt-4">
+                        <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-400 hover:text-indigo-300 transition-colors">
+                            دعنا نتحدث عن مشروعك القادم ونحوله إلى واقع ←
+                        </a>
+                    </div>
+                </div>
+
+                <!-- البطاقة الشخصية الجانبية -->
+                <div class="w-full bg-[#1e293b]/40 border border-slate-800/80 rounded-2xl p-5 space-y-6 backdrop-blur-sm shadow-xl group">
+                    
+                    <div class="relative w-full aspect-[4/4] rounded-xl overflow-hidden border border-slate-700/50 bg-[#0f172a]">
+                        <img src="me.jpg" alt="مجد خميس" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#161f30] via-transparent to-transparent opacity-80"></div>
+                    </div>
+
+                    <div class="flex items-center gap-4 flex-row-reverse">
+                        <img src="me.jpg" alt="مجد خميس" class="w-12 h-12 rounded-full object-cover border border-indigo-500/50 shrink-0 shadow-md">
+                        <div class="text-right flex-grow">
+                            <h3 class="text-lg font-bold text-white">مجد خميس</h3>
+                            <p class="text-xs text-indigo-400 font-medium font-['Plus_Jakarta_Sans'] mt-0.5">Full-Stack Developer</p>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-slate-800/60 pt-4 space-y-3 text-sm">
+                        <div class="flex justify-between items-center flex-row-reverse">
+                            <span class="text-slate-400">الموقع الحالي:</span>
+                            <span class="text-slate-200 font-medium">عن بُعد / سورية</span>
+                        </div>
+                        <div class="flex justify-between items-center flex-row-reverse">
+                            <span class="text-slate-400">مجال التخصص:</span>
+                            <span class="text-slate-200 font-medium">تطبيقات ويب + ديسكتوب</span>
+                        </div>
+                        <div class="flex justify-between items-center flex-row-reverse">
+                            <span class="text-slate-400">فلسفة الأكواد:</span>
+                            <span class="text-emerald-400 font-medium">Clean Code & OOP</span>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-slate-800/60 pt-4">
+                        <p class="text-xs text-slate-500 mb-3 text-right">التركيز البرمجي الأساسي</p>
+                        <div class="flex flex-wrap gap-2 justify-start font-['Plus_Jakarta_Sans'] text-[11px] font-medium">
+                            <span class="px-2.5 py-1 bg-[#0f172a]/60 text-slate-300 rounded-md border border-slate-800">C# / WinForms</span>
+                            <span class="px-2.5 py-1 bg-[#0f172a]/60 text-slate-300 rounded-md border border-slate-800">Laravel / PHP</span>
+                            <span class="px-2.5 py-1 bg-[#0f172a]/60 text-slate-300 rounded-md border border-slate-800">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- قسم المهارات (Skills) -->
+        <section id="skills" class="py-24 border-t border-slate-800/50">
+            <div class="space-y-12 text-right">
+                
+                <div class="space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-widest text-indigo-500 font-['Plus_Jakarta_Sans']">TECHNICAL SKILLS</span>
+                    <h2 class="text-2xl md:text-4xl font-bold text-white">
+                        الأدوات والتقنيات التي أعتمد عليها
+                    </h2>
+                    <p class="text-slate-400 max-w-2xl text-sm md:text-base">
+                        مجموعة الأدوات والبيئات البرمجية التي أستخدمها لبناء تطبيقات سطح مكتب مستقرة ومواقع ويب متكاملة وقابلة للتطوير.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 font-['Plus_Jakarta_Sans'] text-left" dir="ltr">
+                    
+                    <div class="bg-[#1e293b]/40 border border-slate-800/80 rounded-xl p-5 hover:border-indigo-500/50 hover:bg-[#1e293b]/60 transition-all group duration-300">
+                        <div class="text-2xl mb-3">🔷</div>
+                        <h3 class="text-white font-bold group-hover:text-indigo-400 transition-colors">C# Language</h3>
+                        <p class="text-xs text-slate-500 mt-1">Core & OOP Development</p>
+                    </div>
+
+                    <div class="bg-[#1e293b]/40 border border-slate-800/80 rounded-xl p-5 hover:border-indigo-500/50 hover:bg-[#1e293b]/60 transition-all group duration-300">
+                        <div class="text-2xl mb-3">🪟</div>
+                        <h3 class="text-white font-bold group-hover:text-indigo-400 transition-colors">Windows Forms</h3>
+                        <p class="text-xs text-slate-500 mt-1">Desktop Application GUI</p>
+                    </div>
+
+                    <div class="bg-[#1e293b]/40 border border-slate-800/80 rounded-xl p-5 hover:border-indigo-500/50 hover:bg-[#1e293b]/60 transition-all group duration-300">
+                        <div class="text-2xl mb-3">🐘</div>
+                        <h3 class="text-white font-bold group-hover:text-indigo-400 transition-colors">PHP</h3>
+                        <p class="text-xs text-slate-500 mt-1">Server-Side Scripting</p>
+                    </div>
+
+                    <div class="bg-[#1e293b]/40 border border-slate-800/80 rounded-xl p-5 hover:border-indigo-500/50 hover:bg-[#1e293b]/60 transition-all group duration-300">
+                        <div class="text-2xl mb-3">🌶️</div>
+                        <h3 class="text-white font-bold group-hover:text-indigo-400 transition-colors">Laravel Framework</h3>
+                        <p class="text-xs text-slate-500 mt-1">Backend Web Systems</p>
+                    </div>
+
+                    <div class="bg-[#1e293b]/40 border border-slate-800/80 rounded-xl p-5 hover:border-indigo-500/50 hover:bg-[#1e293b]/60 transition-all group duration-300">
+                        <div class="text-2xl mb-3">🌐</div>
+                        <h3 class="text-white font-bold group-hover:text-indigo-400 transition-colors">HTML5 / CSS3</h3>
+                        <p class="text-xs text-slate-500 mt-1">Web Structure & Styling</p>
+                    </div>
+
+                    <div class="bg-[#1e293b]/40 border border-slate-800/80 rounded-xl p-5 hover:border-indigo-500/50 hover:bg-[#1e293b]/60 transition-all group duration-300">
+                        <div class="text-2xl mb-3">🎨</div>
+                        <h3 class="text-white font-bold group-hover:text-indigo-400 transition-colors">Tailwind CSS</h3>
+                        <p class="text-xs text-slate-500 mt-1">Modern UI Design</p>
+                    </div>
+
+                    <div class="bg-[#1e293b]/40 border border-slate-800/80 rounded-xl p-5 hover:border-indigo-500/50 hover:bg-[#1e293b]/60 transition-all group duration-300">
+                        <div class="text-2xl mb-3">⚡</div>
+                        <h3 class="text-white font-bold group-hover:text-indigo-400 transition-colors">JavaScript</h3>
+                        <p class="text-xs text-slate-500 mt-1">Client-Side Interactions</p>
+                    </div>
+
+                    <div class="bg-[#1e293b]/40 border border-slate-800/80 rounded-xl p-5 hover:border-indigo-500/50 hover:bg-[#1e293b]/60 transition-all group duration-300">
+                        <div class="text-2xl mb-3">🗄️</div>
+                        <h3 class="text-white font-bold group-hover:text-indigo-400 transition-colors">SQL Databases</h3>
+                        <p class="text-xs text-slate-500 mt-1">Relational Data Management</p>
+                    </div>
+
+                </div>
+
+                <div class="pt-6 border-t border-slate-800/40 flex flex-wrap items-center gap-3 justify-start md:justify-end text-xs" dir="ltr">
+                    <span class="text-slate-500 font-medium font-sans order-last md:order-first">:أدوات أخرى أتقنها</span>
+                    <span class="px-3 py-1.5 bg-[#1e293b]/20 border border-slate-800 text-slate-400 rounded-lg">Git & GitHub</span>
+                    <span class="px-3 py-1.5 bg-[#1e293b]/20 border border-slate-800 text-slate-400 rounded-lg">RESTful APIs</span>
+                    <span class="px-3 py-1.5 bg-[#1e293b]/20 border border-slate-800 text-slate-400 rounded-lg">JSON Data</span>
+                    <span class="px-3 py-1.5 bg-[#1e293b]/20 border border-slate-800 text-slate-400 rounded-lg">OOP Principles</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- قسم المشاريع (Projects) المحدث بالصور والتأثيرات الإشعاعية المخصصة -->
+        <section id="projects" class="py-24 border-t border-slate-800/50">
+            <div class="space-y-12 text-right">
+                
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+                    <div class="space-y-3 flex-grow">
+                        <span class="text-xs font-bold uppercase tracking-widest text-indigo-500 font-['Plus_Jakarta_Sans']">SELECTED WORK</span>
+                        <h2 class="text-2xl md:text-4xl font-bold text-white">
+                            مشاريع أفتخر بإنجازها
+                        </h2>
+                        <p class="text-slate-400 max-w-2xl text-sm md:text-base">
+                            شاهد نماذج من الأنظمة الحقيقية التي قمت ببنائها وتطويرها، حيث يجتمع الأداء العالي مع المعايير البرمجية المتينة.
+                        </p>
+                    </div>
+                    <a href="https://github.com/majdkamas-max" target="_blank" class="text-sm font-semibold text-indigo-400 hover:text-indigo-300 transition-colors shrink-0 flex items-center gap-1 font-['Plus_Jakarta_Sans']">
+                        All Projects ↗
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-right">
+                    
+                    <!-- المشروع 1: إدارة الصيدلية -->
+                    <div class="glow-effect bg-[#1e293b]/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between group duration-300 shadow-lg">
+                        <div class="h-44 bg-[#0f172a] border-b border-slate-800/60 relative overflow-hidden">
+                            <img src="pharmacy.jpg" alt="نظام إدارة الصيدليات الذكي" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#141d2e] via-transparent to-transparent opacity-50"></div>
+                        </div>
+                        <div class="p-6 space-y-4 flex-grow flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <div class="flex flex-wrap gap-2 justify-start font-['Plus_Jakarta_Sans'] text-[10px] font-semibold" dir="ltr">
+                                    <span class="px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded">C# Language</span>
+                                    <span class="px-2 py-0.5 bg-purple-500/10 text-purple-400 rounded">WinForms</span>
+                                    <span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 rounded">SQL Server</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">نظام إدارة الصيدليات الذكي (My Pharmacy)</h3>
+                                <p class="text-sm text-slate-400 leading-relaxed">
+                                    تطبيق سطح مكتب متكامل وقوي مصمم لإدارة عمليات الصيدلية اليومية، يشمل إدارة المخزون الدوائي، وتتبع تواريخ الصلاحية، وتسجيل المبيعات والفواتير بدقة وسرعة عالية.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3 pt-4 border-t border-slate-800/60 font-['Plus_Jakarta_Sans'] text-xs" dir="ltr">
+                                <a href="https://github.com/majdkamas-max/My_Pharmacy_System.git" target="_blank" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg font-medium transition-colors flex items-center gap-1.5 w-full justify-center">
+                                    GitHub 📁
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المشروع 2: متجر الملابس -->
+                    <div class="glow-effect bg-[#1e293b]/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between group duration-300 shadow-lg">
+                        <div class="h-44 bg-[#0f172a] border-b border-slate-800/60 relative overflow-hidden">
+                            <img src="shop.jpg" alt="منصة متجر الملابس الإلكتروني" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#141d2e] via-transparent to-transparent opacity-50"></div>
+                        </div>
+                        <div class="p-6 space-y-4 flex-grow flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <div class="flex flex-wrap gap-2 justify-start font-['Plus_Jakarta_Sans'] text-[10px] font-semibold" dir="ltr">
+                                    <span class="px-2 py-0.5 bg-indigo-500/10 text-indigo-400 rounded">Laravel</span>
+                                    <span class="px-2 py-0.5 bg-cyan-500/10 text-cyan-400 rounded">MySQL</span>
+                                    <span class="px-2 py-0.5 bg-slate-500/10 text-slate-300 rounded">TailwindCSS</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">منصة متكاملة لمتجر ملابس إلكتروني</h3>
+                                <p class="text-sm text-slate-400 leading-relaxed">
+                                    موقع ويب تفاعلي لعرض وبيع المنتجات والملابس الحديثة. يتميز بواجهة مستخدم متجاوبة تماماً، نظام سلة مشتريات مرن، ولوحة تحكم خلفية مخصصة لإدارة المنتجات والطلبات.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3 pt-4 border-t border-slate-800/60 font-['Plus_Jakarta_Sans'] text-xs" dir="ltr">
+                                <a href="https://github.com/majdkamas-max/Website-for-a-clothing-store.git" target="_blank" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg font-medium transition-colors flex items-center gap-1.5 w-full justify-center">
+                                    GitHub 📁
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المشروع 3: إدارة الجمعيات -->
+                    <div class="glow-effect bg-[#1e293b]/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between group duration-300 shadow-lg">
+                        <div class="h-44 bg-[#0f172a] border-b border-slate-800/60 relative overflow-hidden">
+                            <img src="association.jpg" alt="نظام إدارة الجمعيات والمؤسسات" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#141d2e] via-transparent to-transparent opacity-50"></div>
+                        </div>
+                        <div class="p-6 space-y-4 flex-grow flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <div class="flex flex-wrap gap-2 justify-start font-['Plus_Jakarta_Sans'] text-[10px] font-semibold" dir="ltr">
+                                    <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 rounded">PHP Systems</span>
+                                    <span class="px-2 py-0.5 bg-indigo-500/10 text-indigo-400 rounded">Laravel</span>
+                                    <span class="px-2 py-0.5 bg-slate-500/10 text-slate-300 rounded">Database Design</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">نظام إدارة الجمعيات والمؤسسات</h3>
+                                <p class="text-sm text-slate-400 leading-relaxed">
+                                    حل برمي متطور مخصص لتنظيم هيكلية الجمعيات والمؤسسات، يتيح أتمتة سجلات الأعضاء، تنظيم الاشتراكات والنشاطات، وإدارة التقارير الدورية بكفاءة وأمان تام للبيانات.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3 pt-4 border-t border-slate-800/60 font-['Plus_Jakarta_Sans'] text-xs" dir="ltr">
+                                <a href="https://github.com/majdkamas-max/association-management.git" target="_blank" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg font-medium transition-colors flex items-center gap-1.5 w-full justify-center">
+                                   GitHub 📁
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم التواصل (Contact) -->
+        <section id="contact" class="py-24 border-t border-slate-800/50 text-center relative overflow-hidden">
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-indigo-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+            
+            <div class="max-w-5xl mx-auto space-y-8 relative z-10 px-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-indigo-500 font-['Plus_Jakarta_Sans']">GET IN TOUCH</span>
+                
+                <h2 class="text-3xl md:text-5xl font-bold text-white max-w-3xl mx-auto leading-tight">
+                    لنقم ببناء شيء استثنائي معاً.
+                </h2>
+                
+                <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+                    سواء كنت تبحث عن مطور للعمل على مشروع مستقل (Freelance)، أو وظيفة كاملة، أو حتى مناقشة فكرة برمجية جديدة - يسعدني جداً تواصلك معي للبدء فوراً.
+                </p>
+
+                <div class="flex flex-wrap justify-center items-center gap-4 pt-6 font-['Plus_Jakarta_Sans'] text-sm" dir="ltr">
+                    <a href="mailto:majdkamas@gmail.com" class="px-5 py-3 bg-[#1e293b]/40 border border-slate-800 hover:border-indigo-500/50 hover:text-indigo-400 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 text-slate-300 shadow-md">
+                        <span>📧</span> Email
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/majd-kamas-1770b4387" target="_blank" class="px-5 py-3 bg-[#1e293b]/40 border border-slate-800 hover:border-indigo-500/50 hover:text-indigo-400 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 text-slate-300 shadow-md">
+                        <span>💼</span> LinkedIn
+                    </a>
+                    
+                    <a href="https://github.com/majdkamas-max" target="_blank" class="px-5 py-3 bg-[#1e293b]/40 border border-slate-800 hover:border-indigo-500/50 hover:text-indigo-400 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 text-slate-300 shadow-md">
+                        <span>📁</span> GitHub
+                    </a>
+
+                    <a href="https://www.facebook.com/share/1E5yGbPwk2/" target="_blank" class="px-5 py-3 bg-[#1e293b]/40 border border-slate-800 hover:border-indigo-500/50 hover:text-indigo-400 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 text-slate-300 shadow-md">
+                        <span>🌐</span> Facebook
+                    </a>
+
+                    <a href="https://www.instagram.com/bwljwdkhmys?igsh=anZnam4zNWlrdzB4" target="_blank" class="px-5 py-3 bg-[#1e293b]/40 border border-slate-800 hover:border-indigo-500/50 hover:text-indigo-400 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 text-slate-300 shadow-md">
+                        <span>📸</span> Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+   
+        <!-- الفوتر (Footer) -->
+        <footer class="py-8 border-t border-slate-900 bg-[#0b1329]/60 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500 text-center md:text-right">
+                <div>
+                    <p>© 2026 <span class="text-indigo-400 font-semibold">majd.kamas</span>. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="flex items-center gap-6 font-['Plus_Jakarta_Sans'] text-xs">
+                    <a href="#home" class="hover:text-slate-300 transition-colors">الرئيسية</a>
+                    <a href="#about" class="hover:text-slate-300 transition-colors">نبذة عني</a>
+                    <a href="#projects" class="hover:text-slate-300 transition-colors">المشاريع</a>
+                    <a href="#contact" class="hover:text-slate-300 transition-colors">تواصل معي</a>
+                </div>
+            </div>
+        </footer>
+        
+    </main>
+
+    <!-- ربط ملف الجافا سكريبت التفاعلي -->
+    <script src="script.js"></script>
+</body>
+</html>
