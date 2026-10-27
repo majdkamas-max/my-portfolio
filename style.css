@@ -151,3 +151,20 @@ html{overflow-x:clip}
 .skills-marquee{direction:ltr!important;flex-direction:row!important;gap:0!important;animation:none!important;animation-play-state:paused!important;will-change:transform;}
 .skills-track{direction:ltr!important;flex:0 0 auto!important;flex-direction:row!important;width:max-content!important;max-width:none!important;white-space:nowrap!important;}
 .skills-track .skill-pill{flex:0 0 auto!important;}
+
+/* Portrait callout fix: keep the top status label clear of the face in RTL and LTR. */
+.hero-visual{overflow:visible;}
+.portrait-stage{margin-block:30px 14px;}
+.floating-note--top{top:-12%;right:-3%;max-width:min(240px,62vw);}
+html[dir="ltr"] .floating-note--top{right:auto;left:-3%;}
+@media (max-width:800px){
+  .portrait-stage{margin-block:36px 18px;}
+  .floating-note--top{top:-14%;right:-2%;max-width:min(230px,64vw);}
+  html[dir="ltr"] .floating-note--top{right:auto;left:-2%;}
+  .floating-note--bottom{bottom:9%;left:-6%;}
+  html[dir="ltr"] .floating-note--bottom{left:auto;right:-6%;}
+}
+@media (max-width:520px){
+  .portrait-stage{margin-block:38px 18px;}
+  .floating-note--top{top:-15%;}
+}
